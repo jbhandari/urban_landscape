@@ -2,3 +2,9 @@
   <h1> Urbanscape Landscapes </h1>
   <h2> A gallery dedicated to the Urban oasis </h2>
 </div>
+
+<%= render 'images/form', landscape: @landscape %>
+
+<% @landscapes.each do |scape| %>
+  <%= image_tag scape.image_url(:thumb) %>
+<% end %>

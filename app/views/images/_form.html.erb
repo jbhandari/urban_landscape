@@ -1,0 +1,6 @@
+<%= simple_form_for landscape, html: {multipart: true} do |form| %>
+  <%= form.input :image, as: :file %>
+  <%= form.input :caption %>
+  <%= form.input :description %>
+  <%= form.submit "Publish" %>
+<% end %>
