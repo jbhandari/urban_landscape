@@ -1,0 +1,13 @@
+.header {
+  border-bottom: 1px solid #EEE;
+  height: 10vh;
+  width: 100%;
+}
+
+img.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  width: 375px;
+}

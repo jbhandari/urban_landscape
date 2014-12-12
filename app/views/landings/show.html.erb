@@ -1,10 +1,6 @@
-<div class='title'>
-  <h1> Urbanscape Landscapes </h1>
-  <h2> A gallery dedicated to the Urban oasis </h2>
+<div class='header'>
+  <%= image_tag("tul_logo.png", class: "logo") %>
 </div>
+<%# <%= render 'images/form', landscape: @landscape %>
 
-<%= render 'images/form', landscape: @landscape %>
-
-<% @landscapes.each do |scape| %>
-  <%= image_tag scape.image_url(:thumb) %>
-<% end %>
+<%= render 'landscapes/images', landscapes: @landscapes %>

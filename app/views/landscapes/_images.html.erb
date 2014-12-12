@@ -1,0 +1,23 @@
+<section id="gallery">
+  <% @landscapes.each do |scape| %>
+
+    <section class="item">
+      <a href="#img<%= scape.id %>">
+        <%= image_tag(scape.image_url, size: "200x200", alt: "Not found") %>
+      </a>
+    </section>
+
+    <div class="lightbox" id="img<%= scape.id %>">
+      <div class="box">
+        <a class="close" href="#">X</a>
+        <p class="title"><%= scape.caption %></p>
+        <div class="content">
+          <%= image_tag(scape.image_url, alt: "Oops we cannot process the image at this time!") %>
+          <p class="desc"> <%= scape.description %></p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  <% end %>
+</section>
+

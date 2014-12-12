@@ -1,0 +1,114 @@
+#gallery {
+  display: block;
+  margin: 10vh auto;
+  overflow: auto;
+  width:600px;
+  height:400px;
+}
+
+#gallery a {
+  text-decoration:none;
+}
+
+#gallery .item {
+  float: left;
+  width: 200px; height: 200px; overflow: hidden;
+}
+
+
+#gallery .item a { 
+  overflow: hidden;
+}
+
+#gallery .item a img {
+  align-self: center;
+  max-height: 100%; 
+}
+
+.lightbox {
+  /** Hide the lightbox */
+  display: none;
+
+  /** Apply basic lightbox styling */
+  color:#333333;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.lightbox:target {
+    /** Show lightbox when it is target */
+    display: block;
+    outline: none;
+}
+
+.lightbox .box {
+  background-color:#FFF;
+  box-shadow: 0px 1px 26px -3px #777777; 
+  margin: 2% auto;
+  min-width:500px;
+  padding:10px 20px 10px 20px;
+  width: -moz-min-content;
+  width: -webkit-min-content;
+  width: min-content;
+}
+
+.lightbox .title {
+  margin:0;
+  text-align: center;
+  padding:0 0 10px 0px;
+  border-bottom:1px #ccc solid;
+  font-size:22px;
+}
+
+.lightbox .content {
+  display:block;
+  position:relative;
+}
+
+.content img {
+  max-width: 800px;
+}
+
+
+.lightbox .content .desc {
+  background:rgba(0,0,0,0.8);
+  bottom:0;
+  color:#fff;
+  font-size:17px;
+  margin: 4px;
+  opacity:0;
+  padding:10px;
+  position:absolute;
+  text-align: center;
+  transition: width 2s;
+  width: 90%;
+  z-index:99;
+  -webkit-transition: width 2s;
+}
+
+.lightbox .content:hover .desc	{
+  opacity:5;
+  width: 50%;
+}
+
+.lightbox .close {
+  display:block;
+  text-decoration:none;
+  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:22px;
+  color:#858585;
+}
+
+
+.close {
+  float:right;
+}
+
+.clear {
+  display:block;
+  clear:both;
+}
