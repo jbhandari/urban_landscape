@@ -14,5 +14,11 @@ gem 'rmagick'
 gem 'carrierwave-aws'
 gem 'simple_form'
 
+group :development do
+  gem 'pry-rails'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+end
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development

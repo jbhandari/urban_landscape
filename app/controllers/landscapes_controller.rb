@@ -7,10 +7,30 @@ class LandscapesController < ApplicationController
 
   def create
     @landscape = Landscape.new(landscape_params)
-    save_landscape
+    continue_redirect("save")
+  end
+
+  def edit
+    @landscape = find_landscape
+  end
+
+  def update
+    @landscape = find_landscape
+    @landscape.update(landscape_params)
+    continue_redirect("save")
+  end
+
+  def destroy
+    @landscape = find_landscape
+    @landscape.destroy
+    continue_redirect("destroy")
   end
 
   private
+
+  def find_landscape
+    current_user.landscapes.find(params[:id])
+  end
 
   def ensure_auth
     flash[:notice] = "You must be signed in to upload!"
@@ -25,12 +45,12 @@ class LandscapesController < ApplicationController
     ).merge(user_id: current_user.id)
   end
 
-  def save_landscape
-    if @landscape.save
-      flash[:notice] = "Successfully uploaded image."
+  def continue_redirect(action)
+    if @landscape.send("#{action}")
+      flash[:notice] = "Successful"
       redirect_to root_path
     else
-      flash[:notice] = "Unsuccessful"
+      flash[:notice] = "Unable to perform action"
       redirect_to root_path
     end
   end

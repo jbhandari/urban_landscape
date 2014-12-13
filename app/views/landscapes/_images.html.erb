@@ -3,20 +3,23 @@
 
     <section class="item">
       <a href="#img<%= scape.id %>">
-        <% if scape.user_id == current_user.id %>
+        <% if signed_in? && scape.user_id == current_user.id %>
           <div class='owner'></div>
         <% end %>
 
-        <%= image_tag(scape.image_url, size: "200x200", alt: "Not found") %>
+        <%= image_tag(scape.image_url, size: "200x200", alt: "Unavailable") %>
       </a>
     </section>
 
     <div class="lightbox" id="img<%= scape.id %>">
       <div class="box">
         <a class="close" href="#">X</a>
+        <% if signed_in? && scape.user_id == current_user.id %>
+          <%= render 'landscapes/action_links', scape: scape %>
+        <% end %>
         <p class="title"><%= scape.caption %></p>
         <div class="content">
-          <%= image_tag(scape.image_url, alt: "Oops we cannot process the image at this time!") %>
+          <%= image_tag(scape.image_url, alt: "Unavailable") %>
           <p class="desc"> <%= scape.description %></p>
         </div>
         <div class="clear"></div>

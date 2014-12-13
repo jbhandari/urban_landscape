@@ -1,11 +1,12 @@
-<div class='form-wrapper'>
-  <h1 class='form-title'> Upload a new image to the gallery </h1>
-  <div class='form'>
-    <%= simple_form_for landscape, html: {multipart: true} do |form| %>
-      <%= form.input :image, as: :file %>
-      <%= form.input :caption, input_html: {style: 'max-width: 300px'} %>
-      <%= form.input :description, input_html: {style: 'max-width: 300px'} %>
-      <%= form.submit "Publish" %>
+<div class='form'>
+  <%= simple_form_for landscape, html: {multipart: true} do |form| %>
+
+    <% if params[:action] == "new" %>
+      <%= form.input :image, as: :file, label: "Images file (png/jpg/jpeg/gif)" %>
     <% end %>
-  </div>
+
+    <%= form.input :caption, input_html: {style: 'max-width: 300px'} %>
+    <%= form.input :description, input_html: {style: 'max-width: 300px'} %>
+    <%= form.submit "Publish" %>
+  <% end %>
 </div>
