@@ -22,7 +22,7 @@ class LandscapesController < ApplicationController
       :caption,
       :description,
       :image
-    )
+    ).merge(user_id: current_user.id)
   end
 
   def save_landscape
