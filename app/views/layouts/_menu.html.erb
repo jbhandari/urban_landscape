@@ -1,0 +1,32 @@
+<nav class="main-menu">
+  <ul>
+
+    <% if signed_in? %>
+      <li>
+        <span class="logged">
+          <i class="fa fa-user fa-lg"></i>
+          <span class="nav-text"><%= current_user.email %></span>
+        </span>
+      </li>
+    <% end %>
+
+    <li>
+      <a href="/">
+        <i class="fa fa-camera-retro fa-lg"></i>
+        <span class="nav-text">Gallery</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/landscapes/new">
+        <i class="fa fa-plus fa-lg"></i>
+        <span class="nav-text">Upload</span>
+      </a>
+    </li>
+
+    <li>
+      <%= render 'layouts/auth_links' %>
+    </li>
+
+  </ul>
+</nav>

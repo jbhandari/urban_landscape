@@ -1,10 +1,21 @@
 class LandscapesController < ApplicationController
+  before_action :ensure_auth, if: :signed_out?
+
+  def new
+    @landscape = Landscape.new
+  end
+
   def create
     @landscape = Landscape.new(landscape_params)
     save_landscape
   end
 
   private
+
+  def ensure_auth
+    flash[:notice] = "You must be signed in to upload!"
+    redirect_to sign_in_path
+  end
 
   def landscape_params
     params.require(:landscape).permit(
