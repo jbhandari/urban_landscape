@@ -69,6 +69,8 @@ In development and locally everything seems to run fine, however I uploaded it o
 
 The most difficult part has been setting up rspec and capybara. I was not able to get my testing framework set up. I wrote this without TDD which is something I don't prefer. However I had to cut my losses with troubleshooting and carry on. I may run [suspenders](https://github.com/thoughtbot/suspenders) tomorrow and get some tests in there. I prefer to TDD my way through an app and this was a real downer for me, seems like a load issue or something in my configuration files. My current project had all testing frameworks already installed so it seems like setting up rspec, capybara, and factory girl, and configuring it is something that is important for my development as a dev. 
 
-I will continue to add to this application until a firm answer is given! But overall it has been a real pleasure hammering out this app, I thoroughly enjoyed every bit of it and will continue to add to it. Thank you again for this opportunity!
+I would eventually like to add a filtering option that would filter the gallery to only the user's images. Pre-populate the gallery with images. Through my development process I didn't acknowledge a need for any AJAX features however I would eventually like to use jQuery and add some AJAX features.
+
+I will continue to add to this application until a firm answer is given! But overall it has been a real pleasure hammering out this app, I thoroughly enjoyed every bit of it and will continue to add to it. I hope you find this application to meet the expectations of a junior dev at Info-Tech. I know if given the opportunity I will work diligently on a daily basis to add to Info-Tech's development in any capacity possible. Thank you again for this opportunity!
 
 Jatin. 
