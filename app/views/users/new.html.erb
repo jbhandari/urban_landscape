@@ -1,0 +1,17 @@
+<div class='form-wrapper'>
+  <div id="clearance" class="sign-up form">
+    <h1 class='form-title'><%= t('.title') %></h1>
+
+    <%= form_for @user do |form| %>
+      <%= render :partial => '/users/form', :object => form %>
+
+      <div class="submit-field">
+        <%= form.submit %>
+      </div>
+
+      <div class="other-links">
+        <%= link_to t('.sign_in'), sign_in_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

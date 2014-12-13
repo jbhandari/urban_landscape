@@ -1,0 +1,44 @@
+.form-wrapper {
+  height: 50vh;
+  margin: 20vh 20% 0 20%;
+  width: 60%;
+}
+
+.form-title {
+  border-bottom: 1px solid #EEE;
+}
+
+.form {
+  width: 80%;
+}
+.form-sign-in {
+  margin-top: -17vh;
+  margin-left: -33%;
+}
+.simple_form div.input {
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.simple_form label {
+  width: 100px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+div.boolean, .simple_form input[type='submit'] {
+  background: #EEE;
+  border: none;
+  color: #707070;
+}
+
+.field_with_errors {
+  background-color: #ff3333;
+}
+
+.simple_form .error {
+  clear: left;
+  color: black;
+  display: block;
+  margin-left: 120px;
+}

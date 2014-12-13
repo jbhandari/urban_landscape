@@ -1,6 +1,11 @@
-<%= simple_form_for landscape, html: {multipart: true} do |form| %>
-  <%= form.input :image, as: :file %>
-  <%= form.input :caption %>
-  <%= form.input :description %>
-  <%= form.submit "Publish" %>
-<% end %>
+<div class='form-wrapper'>
+  <h1 class='form-title'> Upload a new image to the gallery </h1>
+  <div class='form'>
+    <%= simple_form_for landscape, html: {multipart: true} do |form| %>
+      <%= form.input :image, as: :file %>
+      <%= form.input :caption, input_html: {style: 'max-width: 300px'} %>
+      <%= form.input :description, input_html: {style: 'max-width: 300px'} %>
+      <%= form.submit "Publish" %>
+    <% end %>
+  </div>
+</div>
