@@ -8,4 +8,5 @@ CarrierWave.configure do |config|
     access_key_id:     "#{Rails.application.secrets.access_key_id}",
     secret_access_key: "#{Rails.application.secrets.secret_access_key}"
   }
+  config.cache_dir = "#{Rails.root}/tmp/uploads"
 end
