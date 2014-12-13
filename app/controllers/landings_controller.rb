@@ -1,6 +1,5 @@
 class LandingsController < ApplicationController
-  def show
+  def index
     @landscapes = Landscape.all
-    @landscape = Landscape.new
   end
 end

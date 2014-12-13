@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'landings#show'
+  root 'landings#index'
 
   resources :landscapes, only: [:new, :create]
 end

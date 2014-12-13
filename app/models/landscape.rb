@@ -7,4 +7,5 @@ class Landscape < ActiveRecord::Base
   validates :caption, presence: true
   validates :description, presence: true
   validates :image, presence: true
+
 end

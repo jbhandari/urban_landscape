@@ -3,6 +3,10 @@
 
     <section class="item">
       <a href="#img<%= scape.id %>">
+        <% if scape.user_id == current_user.id %>
+          <div class='owner'></div>
+        <% end %>
+
         <%= image_tag(scape.image_url, size: "200x200", alt: "Not found") %>
       </a>
     </section>
