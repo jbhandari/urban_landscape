@@ -92,6 +92,10 @@
   width:190px;
 }
 
+.email {
+  font-size: 11px;
+}
+
 .main-menu .fb-like {
   left: 180px;
   position:absolute;
