@@ -1,6 +1,6 @@
 This application is an image gallery that allows users to upload an image to the application. Images are rendered as a thumbnail and then once selected , an image can be seen IN ALL ITS GLORY. 
 
-It uploads on to an Amazon bucket. But I removed passwords for the buckets. But this application is a peak into my code abilities.
+It uploads on to an Amazon bucket.
 
 ###Dev Notes:
 
